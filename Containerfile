@@ -5,16 +5,16 @@
 ARG \
     BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-base:main
 
 LABEL \
         org.opencontainers.image.title="Loki" \
         org.opencontainers.image.description="Log aggregator and shipper" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/loki" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-loki/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-loki.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/loki" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-loki/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-loki.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
@@ -26,8 +26,8 @@ COPY LICENSE /usr/src/container/LICENSE
 COPY README.md /usr/src/container/README.md
 
 ENV \
-    IMAGE_NAME="nfrastack/loki" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/container-loki/"
+    IMAGE_NAME="xyksolutions1/loki" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/container-loki/"
 
 RUN echo "" && \
     BUILD_ENV=" \
